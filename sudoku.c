@@ -86,7 +86,7 @@ int subMatricesValidas(Node *n){
 }*/
 
 int is_valid(Node* n){
-    if(filasValidas(n))
+    if(filasValidas(n) == 1)
        return 1;
     return 0;
 }
