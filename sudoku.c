@@ -43,9 +43,9 @@ void print_node(Node* n){
     printf("\n");
 }
 
-void iniciarEn0(int **array, int large){
+void iniciarEn0(int *array, int large){
    for(int i = 0; i < large; i++){
-      *array[i] = 0;
+      array[i] = 0;
    }
 }
 
@@ -53,7 +53,7 @@ int filasValidas(Node *n){
    int array[10];
 
    for(int i = 0; i < 9; i++){
-      iniciarEn0(&array, 10);
+      iniciarEn0(array, 10);
       for(int j = 0; j < 9; j++){
          if(array[n->sudo[i][j]] == 0)
             array[n->sudo[i][j]] = 1;
@@ -68,7 +68,7 @@ int columnasValidas(Node *n){
    int array[10];
 
    for(int j = 0; j < 9; j++){
-      iniciarEn0(&array, 10);
+      iniciarEn0(array, 10);
       for(int i = 0; i < 9; i++){
          if(array[n->sudo[i][j]] == 0)
             array[n->sudo[i][j]] = 1;
