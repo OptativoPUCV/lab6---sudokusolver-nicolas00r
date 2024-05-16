@@ -68,7 +68,7 @@ List* get_adj_nodes(Node* n){
 
     buscar_casilla_vacia(n, &i, &j);
 
-    for(int aux = 1; aux <= 9; aux++){
+    for(int aux = 0; aux <= 9; aux++){
        Node *node_adj = copy(n);
        node_adj->sudo[i][j] = aux;
        aux++;
