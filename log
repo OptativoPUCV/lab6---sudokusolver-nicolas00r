@@ -97,3 +97,28 @@ Thu 16 May 2024 06:30:54 PM UTC:
  tests:  2|4
 total_score: 15/70
 6ac47b5
+Thu 16 May 2024 06:51:10 PM UTC: 
+ sudoku.c | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘filasValidas’:
+sudoku.c:56:18: error: passing argument 1 of ‘iniciarEn0’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+   56 |       iniciarEn0(&array, 10);
+      |                  ^~~~~~
+      |                  |
+      |                  int (*)[10]
+sudoku.c:46:23: note: expected ‘int **’ but argument is of type ‘int (*)[10]’
+   46 | void iniciarEn0(int **array, int large){
+      |                 ~~~~~~^~~~~
+sudoku.c: In function ‘columnasValidas’:
+sudoku.c:71:18: error: passing argument 1 of ‘iniciarEn0’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+   71 |       iniciarEn0(array, 10);
+      |                  ^~~~~
+      |                  |
+      |                  int *
+sudoku.c:46:23: note: expected ‘int **’ but argument is of type ‘int *’
+   46 | void iniciarEn0(int **array, int large){
+      |                 ~~~~~~^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+4ed3ef0
