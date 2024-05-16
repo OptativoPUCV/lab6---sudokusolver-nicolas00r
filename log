@@ -2,3 +2,17 @@ Thu 16 May 2024 05:02:28 PM UTC:
  tests:  0|5
 total_score: 0/70
 925edf2
+Thu 16 May 2024 05:07:02 PM UTC: 
+ sudoku.c | 2 ++
+ 1 file changed, 2 insertions(+)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:54:13: error: expected expression before ‘int’
+   54 |     int i = int j = 0;
+      |             ^~~
+sudoku.c:54:9: error: unused variable ‘i’ [-Werror=unused-variable]
+   54 |     int i = int j = 0;
+      |         ^
+cc1: all warnings being treated as errors
+Compilation failed
+d10b02c
