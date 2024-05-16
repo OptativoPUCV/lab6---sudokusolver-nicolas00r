@@ -50,10 +50,10 @@ void iniciarEn0(int *array, int large){
 }
 
 int filasValidas(Node *n){
-   int array[10];
+   int array[9];
 
    for(int i = 0; i < 9; i++){
-      iniciarEn0(array, 10);
+      iniciarEn0(array, 9);
       for(int j = 0; j < 9; j++){
          if(array[n->sudo[i][j]-1] == 0)
             array[n->sudo[i][j]-1] = 1;
@@ -86,7 +86,7 @@ int subMatricesValidas(Node *n){
 }*/
 
 int is_valid(Node* n){
-    if(filasValidas(n) == 1)
+    if(filasValidas(n))
        return 1;
     return 0;
 }
