@@ -48,11 +48,32 @@ int is_valid(Node* n){
     return 1;
 }
 
+void buscar_casilla_vacia(Node *n, int *fil, int *col){
+   int i, j;
+   for(i = 0; i < 9; i++){
+      for(j = 0; j < 9 ; j++){
+         if(n->sudo[i][j] == 0){
+            *fil = i;
+            *col = j;
+            return;;
+         }
+      }
+   }
+   *fil = 9;
+}
 
 List* get_adj_nodes(Node* n){
     List* list=createList();
-    int i = j = 0;   
-   
+    int i,j;
+
+    buscar_casilla_vacia(n, &i, &j);
+
+    for(int aux = 1; aux <= 9; aux++){
+       Node *node_adj = copy(n);
+       node_adj->sudo[i][j] = aux;
+       aux++;
+       pushBack(list, node_adj);
+    }   
     return list;
 }
 
