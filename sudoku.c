@@ -55,10 +55,8 @@ int filasValidas(Node *n){
    for(int i = 0; i < 9; i++){
       iniciarEnCero(array, 10);
       for(int j = 0; j < 9; j++){
-         if(array[n->sudo[i][j]] == 0)
-            array[n->sudo[i][j]] = 1;
-         else 
-            return 0;
+         array[n->sudo[i][j]]++;
+         if(array[n->sudo[i][j]] > 1) return 0;
       }
    }
    return 1;
@@ -70,10 +68,8 @@ int columnasValidas(Node *n){
    for(int j = 0; j < 9; j++){
       iniciarEnCero(array, 10);
       for(int i = 0; i < 9; i++){
-         if(array[n->sudo[i][j]] == 0)
-            array[n->sudo[i][j]] = 1;
-         else 
-            return 0;
+         array[n->sudo[i][j]]++;
+         if(array[n->sudo[i][j]] > 1) return 0;
       }
    }
    return 1;
