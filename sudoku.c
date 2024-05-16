@@ -147,7 +147,7 @@ Node* DFS(Node* initial, int* cont){
    push(pila, initial);
 
    while(top(pila) != NULL){
-      *cont++;
+      (*cont)++;
       n = top(pila);
       pop(pila);
 
