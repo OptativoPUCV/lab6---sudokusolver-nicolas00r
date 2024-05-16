@@ -67,6 +67,7 @@ List* get_adj_nodes(Node* n){
     int i,j;
 
     buscar_casilla_vacia(n, &i, &j);
+    if(i == 9) return list;
 
     for(int aux = 1; aux <= 9; aux++){
        Node *node_adj = copy(n);
