@@ -16,3 +16,18 @@ sudoku.c:54:9: error: unused variable ‘i’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 d10b02c
+Thu 16 May 2024 05:07:25 PM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:54:13: error: ‘j’ undeclared (first use in this function)
+   54 |     int i = j = 0;
+      |             ^
+sudoku.c:54:13: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:54:9: error: unused variable ‘i’ [-Werror=unused-variable]
+   54 |     int i = j = 0;
+      |         ^
+cc1: all warnings being treated as errors
+Compilation failed
+fffef6b
