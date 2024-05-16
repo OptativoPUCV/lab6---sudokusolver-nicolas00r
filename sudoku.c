@@ -68,7 +68,7 @@ int columnasValidas(Node *n){
    int array[10];
 
    for(int j = 0; j < 9; j++){
-      iniciarEn0(array, 10);
+      iniciarEn0(&array, 10);
       for(int i = 0; i < 9; i++){
          if(array[n->sudo[i][j]] == 0)
             array[n->sudo[i][j]] = 1;
