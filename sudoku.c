@@ -50,13 +50,13 @@ void iniciarEn0(int *array, int large){
 }
 
 int filasValidas(Node *n){
-   int array[9];
+   int array[10];
 
    for(int i = 0; i < 9; i++){
-      iniciarEn0(array, 9);
+      iniciarEn0(array, 10);
       for(int j = 0; j < 9; j++){
-         if(array[n->sudo[i][j]-1] == 0)
-            array[n->sudo[i][j]-1] = 1;
+         if(array[n->sudo[i][j]] == 0)
+            array[n->sudo[i][j]] = 1;
          else 
             return 0;
       }
