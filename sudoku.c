@@ -49,7 +49,7 @@ void iniciarEnCero(int *array, int large){
    }
 }
 
-int filasValidas(Node *n){
+int filValidas(Node *n){
    int array[10];
 
    for(int i = 0; i < 9; i++){
@@ -63,7 +63,7 @@ int filasValidas(Node *n){
    return 1;
 }
 
-int columnasValidas(Node *n){
+int colValidas(Node *n){
    int array[10];
 
    for(int j = 0; j < 9; j++){
@@ -96,7 +96,7 @@ int subMValidas(Node *n){
 }
 
 int is_valid(Node* n){
-    if(filasValidas(n) && columnasValidas(n) && subMValidas(n))
+    if(filValidas(n) && colValidas(n) && subMValidas(n))
        return 1;
     return 0;
 }
